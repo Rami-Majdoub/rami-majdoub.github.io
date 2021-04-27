@@ -15,4 +15,4 @@ jobs:
           channel: 'beta'
       - uses: erickzanardo/flutter-gh-pages@v3
         with:
-          workingDir: protfolio
+          workingDir: portfolio
