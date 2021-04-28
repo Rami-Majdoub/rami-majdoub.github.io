@@ -12,7 +12,7 @@ class DevImage extends StatelessWidget {
   			shape: BoxShape.rectangle,
 				borderRadius: BorderRadius.all(Radius.circular(40)),
   			image: DecorationImage(
-  				image: AssetImage('images/rami-majdoub.jpg'),
+  				image: AssetImage('assets/images/rami-majdoub.jpg'),
   				fit: BoxFit.fill,
   			),
   		),
