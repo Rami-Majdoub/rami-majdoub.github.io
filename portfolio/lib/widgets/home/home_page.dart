@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/models/experience.dart';
 
 import 'package:portfolio/widgets/common/action_button.dart';
 import 'package:portfolio/widgets/education/education.dart';
 import 'package:portfolio/widgets/categories/categories.dart';
+import 'package:portfolio/widgets/experiences/experiences.dart';
 import 'package:portfolio/widgets/home/dev_image.dart';
 import 'package:portfolio/widgets/home/dev_name.dart';
 import 'package:portfolio/widgets/home/links.dart';
+import 'package:portfolio/widgets/projects/projects.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -51,12 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     title: "Projects",
                     action: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Categories())
+                      MaterialPageRoute(builder: (context) => Projects())
                     ),
                   ),
                   ActionButton(
                     title: "Experience",
-                    action: () => {},
+                    action: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Experiences())
+                    ),
                   ),
                   ActionButton(
                     title: "Education",

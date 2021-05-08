@@ -25,7 +25,7 @@ class Categories extends StatelessWidget {
         Container(
           padding: EdgeInsets.all(20),
           decoration: new BoxDecoration(
-            color: Colors.amberAccent,
+            color: Colors.blueGrey[100],
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.all(Radius.circular(20)),
           ),

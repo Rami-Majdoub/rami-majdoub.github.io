@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/project.dart';
+import 'package:portfolio/models/experience.dart';
 import 'package:portfolio/models/technologie.dart';
 
-final projects = [
+final experiences = [
 ];
 
-class Projects extends StatelessWidget {
-  const Projects({Key key}) : super(key: key);
+class Experiences extends StatelessWidget {
+  const Experiences({Key key}) : super(key: key);
 
   Widget _getItemWidget(final int index){
-    final project = projects[index];
+    final project = experiences[index];
 
     return Padding(
       padding: EdgeInsets.all(10),
-      child: 
+      child:
         Container(
           padding: EdgeInsets.all(20),
           decoration: new BoxDecoration(
@@ -25,7 +25,7 @@ class Projects extends StatelessWidget {
 						crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             Text(
-              project.title + ' | ' + project.appType,
+              project.title,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -43,30 +43,9 @@ class Projects extends StatelessWidget {
                 fontSize: 17,
               ),
             ),
-            Row(
-              children: [
-                if(project.liveProject != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8, right: 8),
-                    child: OutlinedButton(
-                      onPressed: () { },
-                      child: Text('Try it'),
-                    ),
-                  ),
-
-                if(project.src != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8, right: 8),
-                    child: OutlinedButton(
-                      onPressed: () {  },
-                      child: Text('Source code'),
-                ),
-                  ),
-              ],
-            ),
             if(project.technologies != null && project.technologies.length > 0)
             Container(
-              height: 40,
+              height: 45,
               child:
                 ListView.builder(
                   padding: const EdgeInsets.only(top: 8, right: 8),
@@ -78,12 +57,6 @@ class Projects extends StatelessWidget {
                   },
                 ),
             ),
-            // Row(
-            //   children: 
-            //   (project.technologies == null || project.technologies.length == 0) ?
-            //     []
-            //     : project.technologies?.map((e) => e.getChip())?.toList(),
-            // ),
           ],
         ),
       ),
@@ -94,15 +67,15 @@ class Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Projects"),
+        title:  Text("Experiences"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(10),
-        child: 
+        padding: EdgeInsets.all(8),
+        child:
           Container(
           child: ListView.builder(
-            itemCount: projects.length,
-            itemBuilder: (BuildContext context, int index) { 
+            itemCount: experiences.length,
+            itemBuilder: (BuildContext context, int index) {
               return _getItemWidget(index);
             },
           ),
