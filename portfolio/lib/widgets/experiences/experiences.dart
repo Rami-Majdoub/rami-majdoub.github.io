@@ -3,6 +3,18 @@ import 'package:portfolio/models/experience.dart';
 import 'package:portfolio/models/technologie.dart';
 
 final experiences = [
+  Experience(
+    title: 'Intern',
+    period: 'Aug 2020 - Sep 2020',
+    desc: """Created a component to add and update product quantities in the inventory for Majenna.
+Majenna (majenna.com) is a store management web application.
+Used native JavaScript and MongoDB.""",
+    technologies: [
+      javaScript,
+      mongo,
+      git,
+    ],
+  ),
 ];
 
 class Experiences extends StatelessWidget {
@@ -67,7 +79,7 @@ class Experiences extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Experiences"),
+        title:  Text("Experience"),
       ),
       body: Padding(
         padding: EdgeInsets.all(8),
