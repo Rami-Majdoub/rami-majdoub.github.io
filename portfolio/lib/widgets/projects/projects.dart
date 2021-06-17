@@ -87,7 +87,7 @@ You lose if you miss 10 of them.""",
     period: 'Jul 2018',
     desc: """ """,
     src: 'https://github.com/Rami-Majdoub/BOUNCE-UP',
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounce_up',
+    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounceup',
     appType: 'Android Application',
     technologies: [
       java
