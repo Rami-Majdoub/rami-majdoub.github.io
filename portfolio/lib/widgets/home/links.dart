@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+void _launchURL(url) async =>
+    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 
 const _links = [
-	// mail to
-	// https://img.icons8.com/color/48/000000/gmail.png
 	{
+		'link': 'mailto:rami.majdoub1@gmail.com',
+		'img': 'https://img.icons8.com/color/48/000000/gmail.png',
+	},
+  {
 		'link': 'https://www.linkedin.com/in/rami-majdoub',
 		'img': 'https://img.icons8.com/color/48/000000/linkedin.png',
 	},
@@ -37,6 +43,9 @@ class Links extends StatelessWidget {
 				),
 				itemBuilder: (BuildContext context, int index){
 					return GestureDetector(
+						onTap: (){
+              _launchURL(_links[index]["link"]);
+					  },
 						child: Image.network(_links[index]["img"], width: 48,),
 					);
 				}
