@@ -39,5 +39,6 @@ final scikit = Technologie(name: 'Scikit', color: Colors.red);
 final mlScikit = Technologie(name: 'Scikit Multi-learn', color: Colors.red);
 
 final visualBasic = Technologie(name: 'Visual Basic', color: const Color(0xff945db7));
+final batchfile = Technologie(name: 'Batchfile', color: const Color(0xffC1F12E), fontColor: Colors.black);
 
 final git = Technologie(name: 'Git', color: Colors.red);

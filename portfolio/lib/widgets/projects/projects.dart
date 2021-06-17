@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/models/technologie.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+void _launchURL(url) async =>
+    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 
 final projects = [
   Project(
     title: 'My Restaurant',
-    period: 'Jan 2020 - Feb 2021',
+    period: 'Jan 2021 - Feb 2021',
     desc: """A restaurant management app.
 Running a restaurant can be exhausting and nerve-racking.
 This is an app to help restaurants organize and keep track of the customer's orders.
@@ -15,13 +19,48 @@ This is an app to help restaurants organize and keep track of the customer's ord
 * Tables are a representation of the actual tables.
   shows the list of unpaid bills associated with each table.
 * Bills are the customer orders.
-""",
+
+IMPORTANT: the online version does not work because it is not connected to a database.""",
     src: 'https://github.com/Rami-Majdoub/my-restaurant',
     liveProject: 'http://radiant-peak-84965.herokuapp.com/',
     appType: 'Web Application',
     technologies: [
       php,
       laravel,
+    ],
+  ),
+  Project(
+    title: 'Beat The Beat',
+    period: 'Sep 2019 - Oct 2019',
+    desc: """An android game with multiple difficulty choices.
+It contains 500 levels that are 2.3MB.""",
+    src: null,
+    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.beat_the_beat',
+    appType: 'Android Application',
+    technologies: [
+      java
+    ],
+  ),
+  Project(
+    title: 'Dlilek Mlak',
+    period: 'May 2019 - Aug 2019',
+    desc: """ """,
+    src: null,
+    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.dlilek_mlak',
+    appType: 'Android Application',
+    technologies: [
+      java
+    ],
+  ),
+  Project(
+    title: 'Burst Asteroids',
+    period: 'Mar 2019',
+    desc: """ """,
+    src: null,
+    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.burstasteroids',
+    appType: 'Android Application',
+    technologies: [
+      java
     ],
   ),
   Project(
@@ -44,12 +83,11 @@ You lose if you miss 10 of them.""",
     ],
   ),
   Project(
-    title: 'Beat The Beat',
-    period: 'Sep 2019 - Oct 2019',
-    desc: """An android game with multiple difficulty choices.
-It contains 500 levels that are 2.3MB.""",
-    src: null,
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.beat_the_beat',
+    title: 'BOUNCE UP',
+    period: 'Jul 2018',
+    desc: """ """,
+    src: 'https://github.com/Rami-Majdoub/BOUNCE-UP',
+    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounce_up',
     appType: 'Android Application',
     technologies: [
       java
@@ -67,8 +105,41 @@ It contains 500 levels that are 2.3MB.""",
     ],
   ),
   Project(
+    title: 'Puzzle',
+    period: 'Aug 2015',
+    desc: """ """,
+    src: null,
+    liveProject: 'https://github.com/Rami-Majdoub/Puzzle',
+    appType: 'Windows Application',
+    technologies: [
+      visualBasic
+    ],
+  ),
+  Project(
+    title: 'Car Racing',
+    period: 'Jul 2015',
+    desc: """ """,
+    src: null,
+    liveProject: 'https://github.com/Rami-Majdoub/Car-Racing',
+    appType: 'Windows Application',
+    technologies: [
+      visualBasic,
+    ],
+  ),
+  Project(
+    title: 'TTCach',
+    period: 'Jun 2015',
+    desc: """ """,
+    src: null,
+    liveProject: 'https://github.com/Rami-Majdoub/TTCach',
+    appType: 'Windows Application',
+    technologies: [
+      visualBasic
+    ],
+  ),
+  Project(
     title: 'Deal OR NoDeal',
-    period: '-',
+    period: 'Jun 2015',
     desc: """A game written as a windows application inspired by the Facebook game 'Deal OR NoDeal' and the television game show 'Dlilek Mlak'.
 Used the 'PictureBox' and the 'Label' components in the user interface to represent all the objects. Cases('sandouk' in 'Dlilek Mlak') are represented as PictureBoxes and the texts(case values, dealer proposition...) with Labels. Used also the 'Timer' component to add animation to the withdrawn case value.
 
@@ -78,13 +149,23 @@ The game had many UI/UX problems, these are some of them:
 
 Some of the new things I added:
 - Every game cost 100.
-- The player can spin the wheel once every 24 hours.
-""",
+- The player can spin the wheel once every 24 hours.""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/Deal-OR-NoDeal',
     appType: 'Windows Application',
     technologies: [
       visualBasic
+    ],
+  ),
+  Project(
+    title: 'Tic Tac Toe',
+    period: 'Nov 2013',
+    desc: """ """,
+    src: 'https://github.com/Rami-Majdoub/tic-tac-toe-bat',
+    liveProject: null,
+    appType: 'Windows Batch',
+    technologies: [
+      batchfile,
     ],
   ),
 ];
@@ -133,7 +214,9 @@ class Projects extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 8, right: 8),
                     child: OutlinedButton(
-                      onPressed: () { },
+                      onPressed: () {
+                        _launchURL(project.liveProject);
+                      },
                       child: Text('Try it'),
                     ),
                   ),
@@ -142,7 +225,9 @@ class Projects extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 8, right: 8),
                     child: OutlinedButton(
-                      onPressed: () {  },
+                      onPressed: () {
+                        _launchURL(project.src);
+                      },
                       child: Text('Source code'),
                 ),
                   ),
