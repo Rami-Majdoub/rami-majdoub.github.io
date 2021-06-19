@@ -4,11 +4,15 @@ import 'package:portfolio/models/technologie.dart';
 
 final experiences = [
   Experience(
-    title: 'Intern',
+    title: 'Web developer intern',
+    entreprise: 'Tildah',
     period: 'Aug 2020 - Sep 2020',
-    desc: """Created a component to add and update product quantities in the inventory for Majenna.
-Majenna (majenna.com) is a store management web application.
-Used native JavaScript and MongoDB.""",
+    desc: """I implemented a scenario to update the quantity of multiple products in the inventory for Majenna*.
+Tildah uses a different approach to create its apps.
+Events are used to allow for communication between components(component-component) and the backend(component-backend, backend-component).
+
+*Majenna(majenna.com) is a store management web application.""",
+
     technologies: [
       javaScript,
       mongo,
@@ -21,7 +25,7 @@ class Experiences extends StatelessWidget {
   const Experiences({Key key}) : super(key: key);
 
   Widget _getItemWidget(final int index){
-    final project = experiences[index];
+    final experience = experiences[index];
 
     return Padding(
       padding: EdgeInsets.all(10),
@@ -37,25 +41,25 @@ class Experiences extends StatelessWidget {
 						crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             Text(
-              project.title,
+              experience.title + " | " + experience.entreprise,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              project.period,
+              experience.period,
               style: TextStyle(
                 fontSize: 15,
               ),
             ),
             Text(
-              project.desc,
+              experience.desc,
               style: TextStyle(
                 fontSize: 17,
               ),
             ),
-            if(project.technologies != null && project.technologies.length > 0)
+            if(experience.technologies != null && experience.technologies.length > 0)
             Container(
               height: 45,
               child:
@@ -63,9 +67,9 @@ class Experiences extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 8, right: 8),
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemCount: project.technologies?.length ?? 0,
+                  itemCount: experience.technologies?.length ?? 0,
                   itemBuilder: (BuildContext context, int index) {
-                      return project.technologies[index].getChip();
+                      return experience.technologies[index].getChip();
                   },
                 ),
             ),

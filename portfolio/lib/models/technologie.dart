@@ -26,7 +26,7 @@ final java = Technologie(name: 'Java', color: const Color(0xffb07219));
 
 final javaScript = Technologie(name: 'JavaScript', color: const Color(0xfff1e05a), fontColor: Colors.black);
 final angular = Technologie(name: 'Angular', color: const Color(0xffdc2b3a)); // ts: 2b7489
-final mongo = Technologie(name: 'Mongo', color: const Color(0xff27aa43));
+final mongo = Technologie(name: 'MongoDB', color: const Color(0xff27aa43));
 final express = Technologie(name: 'Express', color: const Color(0xff31312f));
 
 final php = Technologie(name: 'PHP', color: const Color(0xff4F5D95));//4F5D95
