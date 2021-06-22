@@ -8,17 +8,38 @@ void _launchURL(url) async =>
 
 final projects = [
   Project(
+    title: 'Chahriti',
+    period: 'Oct 2020 - Present',
+    desc: """A budget management application.
+This application helps users to:
+  - save all expenses.
+  - see daily & monthly expenses.
+  - group expenses by category.
+  - recognize spending habits.
+  - estimate upcoming payments.
+  - better understanding of the financial state.""",
+    src: null,
+    liveProject: 'https://chahriti.live',
+    appType: 'Web Application',
+    technologies: [
+      javaScript,
+      mongo,
+      express,
+      angular,
+    ],
+  ),
+  Project(
     title: 'My Restaurant',
     period: 'Jan 2021 - Feb 2021',
     desc: """A restaurant management app.
 Running a restaurant can be exhausting and nerve-racking.
 This is an app to help restaurants organize and keep track of the customer's orders.
 
-* Menu is the list of products that can be served.
+- Menu is the list of products that can be served.
   can be customized by creating, editing, and deleting their own products.
-* Tables are a representation of the actual tables.
+- Tables are a representation of the actual tables.
   shows the list of unpaid bills associated with each table.
-* Bills are the customer orders.
+- Bills are the customer orders.
 
 IMPORTANT: the online version does not work because it is not connected to a database.""",
     src: 'https://github.com/Rami-Majdoub/my-restaurant',
@@ -32,8 +53,8 @@ IMPORTANT: the online version does not work because it is not connected to a dat
   Project(
     title: 'Beat The Beat',
     period: 'Sep 2019 - Oct 2019',
-    desc: """An android game with multiple difficulty choices.
-It contains 500 levels that are 2.3MB.""",
+    desc: """A cross platform game made with libGDX.
+This game has multiple difficulty choices and contains 500 levels that are 2.3MB.""",
     src: null,
     liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.beat_the_beat',
     appType: 'Android Application',
@@ -44,7 +65,7 @@ It contains 500 levels that are 2.3MB.""",
   Project(
     title: 'Dlilek Mlak',
     period: 'May 2019 - Aug 2019',
-    desc: """ """,
+    desc: """A cross platform game made with libGDX.""",
     src: null,
     liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.dlilek_mlak',
     appType: 'Android Application',
@@ -55,7 +76,7 @@ It contains 500 levels that are 2.3MB.""",
   Project(
     title: 'Burst Asteroids',
     period: 'Mar 2019',
-    desc: """ """,
+    desc: """A cross platform game made with libGDX.""",
     src: null,
     liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.burstasteroids',
     appType: 'Android Application',
@@ -85,7 +106,8 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'BOUNCE UP',
     period: 'Jul 2018',
-    desc: """ """,
+    desc: """A native android game created using the basic objects Canvas, Paint, etc...
+I made this game in 3 days as a challenge.""",
     src: 'https://github.com/Rami-Majdoub/BOUNCE-UP',
     liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounceup',
     appType: 'Android Application',
@@ -96,7 +118,7 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'Smash Cars',
     period: 'Dec 2017 - Mar 2018',
-    desc: 'Created a native game in java using the basic objects Canvas, Paint, Etc...',
+    desc: 'A native android game created using the basic objects Canvas, Paint, etc...',
     src: null,
     liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.smashcars',
     appType: 'Android Application',
@@ -107,7 +129,10 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'Puzzle',
     period: 'Aug 2015',
-    desc: """ """,
+    desc: """A windows application game.
+I have implemented an XML look-a-like file format to save & load the game & the selected images.
+The player can choose any image to play with.
+The image will be divided into 9 tiles (3 columns * 3 rows).""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/Puzzle',
     appType: 'Windows Application',
@@ -118,7 +143,13 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'Car Racing',
     period: 'Jul 2015',
-    desc: """ """,
+    desc: """A windows application game made with VB.
+Control your car and avoid crashing into other cars.
+You lose when your car touches another car.
+You can use the jump power-up to avoid crashing.
+You get 1 jump power up every 20 points.
+
+The demo is a script controlling the car using if statements.""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/Car-Racing',
     appType: 'Windows Application',
@@ -129,7 +160,7 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'TTCach',
     period: 'Jun 2015',
-    desc: """ """,
+    desc: """A windows application game inspired by the television game show 'TTCash'.""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/TTCach',
     appType: 'Windows Application',
@@ -140,7 +171,7 @@ You lose if you miss 10 of them.""",
   Project(
     title: 'Deal OR NoDeal',
     period: 'Jun 2015',
-    desc: """A game written as a windows application inspired by the Facebook game 'Deal OR NoDeal' and the television game show 'Dlilek Mlak'.
+    desc: """A windows application game inspired by the Facebook game 'Deal OR NoDeal' and the television game show 'Dlilek Mlak'.
 Used the 'PictureBox' and the 'Label' components in the user interface to represent all the objects. Cases('sandouk' in 'Dlilek Mlak') are represented as PictureBoxes and the texts(case values, dealer proposition...) with Labels. Used also the 'Timer' component to add animation to the withdrawn case value.
 
 The game had many UI/UX problems, these are some of them:
@@ -160,7 +191,9 @@ Some of the new things I added:
   Project(
     title: 'Tic Tac Toe',
     period: 'Nov 2013',
-    desc: """ """,
+    desc: """A console game written as a Windows Batchfile.
+Batchfiles were the easiest solution to get me started.
+In the process of making it, I learned how to use echo, set, if and goto statements.""",
     src: 'https://github.com/Rami-Majdoub/tic-tac-toe-bat',
     liveProject: null,
     appType: 'Windows Batch',
