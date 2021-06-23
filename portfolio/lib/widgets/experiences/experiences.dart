@@ -19,6 +19,19 @@ Events are used to allow for communication between components(component-componen
       git,
     ],
   ),
+  Experience(
+    title: 'Machine learning intern',
+    entreprise: 'Faculty of Science, Monastir',
+    period: 'Feb 2019 - Aug 2019',
+    desc: """Created a website for non-professional machine learning users to create a multi-label model, test its performance, and get new data labels.""",
+    technologies: [
+      angular,
+      python,
+      flask,
+      scikit,
+      mlScikit,
+    ],
+  )
 ];
 
 class Experiences extends StatelessWidget {
