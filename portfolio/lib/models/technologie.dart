@@ -30,8 +30,8 @@ final mongo = Technologie(name: 'MongoDB', color: const Color(0xff27aa43));
 final express = Technologie(name: 'Express', color: const Color(0xff31312f));
 
 final php = Technologie(name: 'PHP', color: const Color(0xff4F5D95));//4F5D95
-final laravel = Technologie(name: 'Laravel', color: Colors.red);
-final symfony = Technologie(name: 'Symfony', color: Colors.red);
+final laravel = Technologie(name: 'Laravel', color: const Color(0xfff72c1f));
+final symfony = Technologie(name: 'Symfony', color: Colors.black);
 
 final python = Technologie(name: 'Python', color: const Color(0xff3572A5));
 final flask = Technologie(name: 'Flask', color: Colors.black);
@@ -41,4 +41,4 @@ final mlScikit = Technologie(name: 'Scikit Multi-learn', color: const Color(0xff
 final visualBasic = Technologie(name: 'Visual Basic', color: const Color(0xff945db7));
 final batchfile = Technologie(name: 'Batchfile', color: const Color(0xffC1F12E), fontColor: Colors.black);
 
-final git = Technologie(name: 'Git', color: Colors.red);
+final git = Technologie(name: 'Git', color: const Color(0xffe94e31));
