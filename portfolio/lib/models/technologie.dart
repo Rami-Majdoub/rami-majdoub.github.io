@@ -34,9 +34,9 @@ final laravel = Technologie(name: 'Laravel', color: Colors.red);
 final symfony = Technologie(name: 'Symfony', color: Colors.red);
 
 final python = Technologie(name: 'Python', color: const Color(0xff3572A5));
-final flask = Technologie(name: 'Flask', color: Colors.red);
-final scikit = Technologie(name: 'Scikit', color: Colors.red);
-final mlScikit = Technologie(name: 'Scikit Multi-learn', color: Colors.red);
+final flask = Technologie(name: 'Flask', color: Colors.black);
+final scikit = Technologie(name: 'Scikit', color: const Color(0xfff09437));
+final mlScikit = Technologie(name: 'Scikit Multi-learn', color: const Color(0xffee6e73));
 
 final visualBasic = Technologie(name: 'Visual Basic', color: const Color(0xff945db7));
 final batchfile = Technologie(name: 'Batchfile', color: const Color(0xffC1F12E), fontColor: Colors.black);
