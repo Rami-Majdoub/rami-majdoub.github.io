@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/experience.dart';
 
 import 'package:portfolio/widgets/common/action_button.dart';
+import 'package:portfolio/widgets/common/dark_theme/dark_theme_switcher_container.dart';
 import 'package:portfolio/widgets/education/education.dart';
-import 'package:portfolio/widgets/categories/categories.dart';
 import 'package:portfolio/widgets/experiences/experiences.dart';
 import 'package:portfolio/widgets/home/dev_image.dart';
 import 'package:portfolio/widgets/home/dev_name.dart';
@@ -22,6 +21,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: DarkThemeSwitcherContainer(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
 			body: Container(
 				child: Center(
 					child: Column(

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/common/dark_theme/dark_theme_switcher_container.dart';
 
 const _items = [
   {
@@ -23,37 +24,33 @@ class Education extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.all(10),
-      child: 
-        Container(
+      child: Card(
+        child: Padding(
           padding: EdgeInsets.all(20),
-          decoration: new BoxDecoration(
-            color: Colors.blueGrey[100],
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
           child: Column(
 						crossAxisAlignment: CrossAxisAlignment.start, // horizontally
             children: [
-            Text(
-              _item["certificate"],
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              Text(
+                _item["certificate"],
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Text(
-              _item["period"],
-              style: TextStyle(
-                fontSize: 15,
+              Text(
+                _item["period"],
+                style: TextStyle(
+                  fontSize: 15,
+                ),
               ),
-            ),
-            Text(
-              _item["school"],
-              style: TextStyle(
-                fontSize: 17,
+              Text(
+                _item["school"],
+                style: TextStyle(
+                  fontSize: 17,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -64,6 +61,7 @@ class Education extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:  Text("Education"),
+        actions: <Widget>[DarkThemeSwitcherContainer()],
       ),
       body: Padding(
         padding: EdgeInsets.all(10),

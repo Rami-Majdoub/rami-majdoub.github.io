@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/models/technologie.dart';
+import 'package:portfolio/widgets/common/dark_theme/dark_theme_switcher_container.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void _launchURL(url) async =>
@@ -211,84 +212,73 @@ class Projects extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.all(10),
-      child: 
-        Container(
-          padding: EdgeInsets.all(20),
-          decoration: new BoxDecoration(
-            color: Colors.grey[300],
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+      child: Card(
+        child: Padding(
+        padding: EdgeInsets.all(20),
+        child: Column(
+					crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          Text(
+            project.title + ' | ' + project.appType,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          child: Column(
-						crossAxisAlignment: CrossAxisAlignment.start,
+          Text(
+            project.period,
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
+          Text(
+            project.desc,
+            style: TextStyle(
+              fontSize: 17,
+            ),
+          ),
+          Row(
             children: [
-            Text(
-              project.title + ' | ' + project.appType,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              project.period,
-              style: TextStyle(
-                fontSize: 15,
-              ),
-            ),
-            Text(
-              project.desc,
-              style: TextStyle(
-                fontSize: 17,
-              ),
-            ),
-            Row(
-              children: [
-                if(project.liveProject != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8, right: 8),
-                    child: OutlinedButton(
-                      onPressed: () {
-                        _launchURL(project.liveProject);
-                      },
-                      child: Text('Try it'),
-                    ),
+              if(project.liveProject != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, right: 8),
+                  child: OutlinedButton(
+                    onPressed: () {
+                      _launchURL(project.liveProject);
+                    },
+                    child: Text('Try it'),
                   ),
-
-                if(project.src != null)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8, right: 8),
-                    child: OutlinedButton(
-                      onPressed: () {
-                        _launchURL(project.src);
-                      },
-                      child: Text('Source code'),
                 ),
+
+              if(project.src != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, right: 8),
+                  child: OutlinedButton(
+                    onPressed: () {
+                      _launchURL(project.src);
+                    },
+                    child: Text('Source code'),
                   ),
+                ),
               ],
             ),
             if(project.technologies != null && project.technologies.length > 0)
-            Container(
-              height: 40,
-              child:
-                ListView.builder(
+              Container(
+                height: 40,
+                child: ListView.builder(
                   padding: const EdgeInsets.only(top: 8, right: 8),
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
                   itemCount: project.technologies?.length ?? 0,
                   itemBuilder: (BuildContext context, int index) {
-                      return project.technologies[index].getChip();
+                    return project.technologies[index].getChip();
                   },
                 ),
-            ),
-            // Row(
-            //   children: 
-            //   (project.technologies == null || project.technologies.length == 0) ?
-            //     []
-            //     : project.technologies?.map((e) => e.getChip())?.toList(),
-            // ),
-          ],
+              ),
+            ],
+          ),
         ),
-      ),
+      )
     );
   }
 
@@ -297,11 +287,11 @@ class Projects extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:  Text("Projects"),
+        actions: <Widget>[DarkThemeSwitcherContainer()],
       ),
       body: Padding(
         padding: EdgeInsets.all(10),
-        child: 
-          Container(
+        child: Container(
           child: ListView.builder(
             itemCount: projects.length,
             itemBuilder: (BuildContext context, int index) { 
