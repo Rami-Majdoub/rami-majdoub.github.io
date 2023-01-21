@@ -8,12 +8,8 @@ final experiences = [
     title: 'Web developer intern',
     entreprise: 'Tildah',
     period: 'Aug 2020 - Sep 2020',
-    desc: """I implemented a scenario to update the quantity of multiple products in the inventory for Majenna*.
-Tildah uses a different approach to create its apps.
-Events are used to allow for communication between components(component-component) and the backend(component-backend, backend-component).
-
-*Majenna(majenna.com) is a store management web application.""",
-
+    desc: """Coded a scenario to update the quantity of multiple products in the inventory for Majenna (Majenna is a store management web application hosted at www.majenna.com).
+Covered all edge cases to ensure optimal performance.""",
     technologies: [
       javaScript,
       mongo,
