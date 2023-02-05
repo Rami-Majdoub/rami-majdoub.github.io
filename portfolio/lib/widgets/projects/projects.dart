@@ -9,8 +9,18 @@ void _launchURL(url) async =>
 
 final projects = [
   Project(
+    title: 'Sollearn',
+    period: 'Jan 2023',
+    desc:
+        """A platform for teaching blockchain app development through a list of challenges.""",
+    src: null,
+    liveProject: 'https://rami-majdoub.github.io/sollearn/',
+    appType: 'Web Application',
+    technologies: [solidity, git],
+  ),
+  Project(
     title: 'Chahriti',
-    period: 'Oct 2020 - Present',
+    period: 'Oct 2020 - Aug 2021',
     desc: """A budget management application.
 This application helps users to:
   - save all expenses.
@@ -20,7 +30,7 @@ This application helps users to:
   - estimate upcoming payments.
   - better understanding of the financial state.""",
     src: null,
-    liveProject: 'https://chahriti.live',
+    liveProject: 'https://chahriti.netlify.app/',
     appType: 'Web Application',
     technologies: [
       javaScript,
@@ -57,33 +67,30 @@ IMPORTANT: the online version does not work because it is not connected to a dat
     desc: """A cross platform game made with libGDX.
 This game has multiple difficulty choices and contains 500 levels that are 2.3MB.""",
     src: null,
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.beat_the_beat',
+    liveProject:
+        'https://play.google.com/store/apps/details?id=com.ramimajdoub.beat_the_beat',
     appType: 'Android Application',
-    technologies: [
-      java
-    ],
+    technologies: [java],
   ),
   Project(
     title: 'Dlilek Mlak',
     period: 'May 2019 - Aug 2019',
     desc: """A cross platform game made with libGDX.""",
     src: null,
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.dlilek_mlak',
+    liveProject:
+        'https://play.google.com/store/apps/details?id=com.ramimajdoub.dlilek_mlak',
     appType: 'Android Application',
-    technologies: [
-      java
-    ],
+    technologies: [java],
   ),
   Project(
     title: 'Burst Asteroids',
     period: 'Mar 2019',
     desc: """A cross platform game made with libGDX.""",
     src: null,
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.burstasteroids',
+    liveProject:
+        'https://play.google.com/store/apps/details?id=com.ramimajdoub.burstasteroids',
     appType: 'Android Application',
-    technologies: [
-      java
-    ],
+    technologies: [java],
   ),
   Project(
     title: 'Blow Bubble',
@@ -100,32 +107,30 @@ You lose if you miss 10 of them.""",
     src: 'https://github.com/Rami-Majdoub/Blow-Bubble',
     liveProject: 'https://Rami-Majdoub.github.io/Blow-Bubble',
     appType: 'P5js Game',
-    technologies: [
-      javaScript
-    ],
+    technologies: [javaScript],
   ),
   Project(
     title: 'BOUNCE UP',
     period: 'Jul 2018',
-    desc: """A native android game created using the basic objects Canvas, Paint, etc...
+    desc:
+        """A native android game created using the basic objects Canvas, Paint, etc...
 I made this game in 3 days as a challenge.""",
     src: 'https://github.com/Rami-Majdoub/BOUNCE-UP',
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounceup',
+    liveProject:
+        'https://play.google.com/store/apps/details?id=com.ramimajdoub.bounceup',
     appType: 'Android Application',
-    technologies: [
-      java
-    ],
+    technologies: [java],
   ),
   Project(
     title: 'Smash Cars',
     period: 'Dec 2017 - Mar 2018',
-    desc: 'A native android game created using the basic objects Canvas, Paint, etc...',
+    desc:
+        'A native android game created using the basic objects Canvas, Paint, etc...',
     src: null,
-    liveProject: 'https://play.google.com/store/apps/details?id=com.ramimajdoub.smashcars',
+    liveProject:
+        'https://play.google.com/store/apps/details?id=com.ramimajdoub.smashcars',
     appType: 'Android Application',
-    technologies: [
-      java
-    ],
+    technologies: [java],
   ),
   Project(
     title: 'Puzzle',
@@ -137,9 +142,7 @@ The image will be divided into 9 tiles (3 columns * 3 rows).""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/Puzzle',
     appType: 'Windows Application',
-    technologies: [
-      visualBasic
-    ],
+    technologies: [visualBasic],
   ),
   Project(
     title: 'Car Racing',
@@ -161,18 +164,18 @@ The demo is a script controlling the car using if statements.""",
   Project(
     title: 'TTCach',
     period: 'Jun 2015',
-    desc: """A windows application game inspired by the television game show 'TTCash'.""",
+    desc:
+        """A windows application game inspired by the television game show 'TTCash'.""",
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/TTCach',
     appType: 'Windows Application',
-    technologies: [
-      visualBasic
-    ],
+    technologies: [visualBasic],
   ),
   Project(
     title: 'Deal OR NoDeal',
     period: 'Jun 2015',
-    desc: """A windows application game inspired by the Facebook game 'Deal OR NoDeal' and the television game show 'Dlilek Mlak'.
+    desc:
+        """A windows application game inspired by the Facebook game 'Deal OR NoDeal' and the television game show 'Dlilek Mlak'.
 Used the 'PictureBox' and the 'Label' components in the user interface to represent all the objects. Cases('sandouk' in 'Dlilek Mlak') are represented as PictureBoxes and the texts(case values, dealer proposition...) with Labels. Used also the 'Timer' component to add animation to the withdrawn case value.
 
 The game had many UI/UX problems, these are some of them:
@@ -185,9 +188,7 @@ Some of the new things I added:
     src: null,
     liveProject: 'https://github.com/Rami-Majdoub/Deal-OR-NoDeal',
     appType: 'Windows Application',
-    technologies: [
-      visualBasic
-    ],
+    technologies: [visualBasic],
   ),
   Project(
     title: 'Tic Tac Toe',
@@ -207,96 +208,93 @@ In the process of making it, I learned how to use echo, set, if and goto stateme
 class Projects extends StatelessWidget {
   const Projects({Key key}) : super(key: key);
 
-  Widget _getItemWidget(final int index){
+  Widget _getItemWidget(final int index) {
     final project = projects[index];
 
     return Padding(
-      padding: EdgeInsets.all(10),
-      child: Card(
-        child: Padding(
-        padding: EdgeInsets.all(20),
-        child: Column(
-					crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          Text(
-            project.title + ' | ' + project.appType,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            project.period,
-            style: TextStyle(
-              fontSize: 15,
-            ),
-          ),
-          Text(
-            project.desc,
-            style: TextStyle(
-              fontSize: 17,
-            ),
-          ),
-          Row(
-            children: [
-              if(project.liveProject != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, right: 8),
-                  child: OutlinedButton(
-                    onPressed: () {
-                      _launchURL(project.liveProject);
-                    },
-                    child: Text('Try it'),
-                  ),
+        padding: EdgeInsets.all(10),
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  project.title + ' | ' + project.appType,
+                  style: TextStyle(fontSize: 20),
                 ),
-
-              if(project.src != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, right: 8),
-                  child: OutlinedButton(
-                    onPressed: () {
-                      _launchURL(project.src);
-                    },
-                    child: Text('Source code'),
-                  ),
+                Text(
+                  project.period,
+                  style: TextStyle(fontSize: 15),
                 ),
+                Text(
+                  project.desc,
+                  style: TextStyle(fontSize: 17),
+                ),
+                Row(
+                  children: [
+                    if (project.liveProject != null)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8, right: 8),
+                        child: OutlinedButton(
+                          onPressed: () {
+                            _launchURL(project.liveProject);
+                          },
+                          child: Text('Try it'),
+                        ),
+                      ),
+                    if (project.src != null)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8, right: 8),
+                        child: OutlinedButton(
+                          onPressed: () {
+                            _launchURL(project.src);
+                          },
+                          child: Text('Source code'),
+                        ),
+                      ),
+                  ],
+                ),
+                if (project.technologies != null &&
+                    project.technologies.length > 0)
+                  Container(
+                    height: 40,
+                    child: ListView.builder(
+                      padding: const EdgeInsets.only(top: 8, right: 8),
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemCount: project.technologies?.length ?? 0,
+                      itemBuilder: (BuildContext context, int index) {
+                        return project.technologies[index].getChip();
+                      },
+                    ),
+                  ),
               ],
             ),
-            if(project.technologies != null && project.technologies.length > 0)
-              Container(
-                height: 40,
-                child: ListView.builder(
-                  padding: const EdgeInsets.only(top: 8, right: 8),
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: project.technologies?.length ?? 0,
-                  itemBuilder: (BuildContext context, int index) {
-                    return project.technologies[index].getChip();
-                  },
-                ),
-              ),
-            ],
           ),
-        ),
-      )
-    );
+        ));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Projects"),
+        title: Text("Projects"),
         actions: <Widget>[DarkThemeSwitcherContainer()],
       ),
       body: Padding(
         padding: EdgeInsets.all(10),
-        child: Container(
-          child: ListView.builder(
-            itemCount: projects.length,
-            itemBuilder: (BuildContext context, int index) { 
-              return _getItemWidget(index);
-            },
+        child: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 720,
+            ),
+            child: ListView.builder(
+              itemCount: projects.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _getItemWidget(index);
+              },
+            ),
           ),
         ),
       ),

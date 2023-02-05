@@ -5,10 +5,35 @@ import 'package:portfolio/widgets/common/dark_theme/dark_theme_switcher_containe
 
 final experiences = [
   Experience(
+    title: 'Blockchain app developer intern',
+    entreprise: 'SQLI Services',
+    period: 'Feb 2022 - Dec 2022',
+    desc: """ """,
+    technologies: [
+      angular,
+      hardhat,
+      solidity,
+      typeScript,
+      git,
+    ],
+  ),
+  Experience(
+    title: 'Software developer intern',
+    entreprise: 'Wellsphere',
+    period: 'Jul 2021 - Aou 2021',
+    desc: """ """,
+    technologies: [
+      xamarin,
+      csharp,
+      git,
+    ],
+  ),
+  Experience(
     title: 'Web developer intern',
     entreprise: 'Tildah',
     period: 'Aug 2020 - Sep 2020',
-    desc: """Coded a scenario to update the quantity of multiple products in the inventory for Majenna (Majenna is a store management web application hosted at www.majenna.com).
+    desc:
+        """Coded a scenario to update the quantity of multiple products in the inventory for Majenna (Majenna is a store management web application hosted at www.majenna.com).
 Covered all edge cases to ensure optimal performance.""",
     technologies: [
       javaScript,
@@ -20,7 +45,8 @@ Covered all edge cases to ensure optimal performance.""",
     title: 'Machine learning intern',
     entreprise: 'Faculty of Science, Monastir',
     period: 'Feb 2019 - Aug 2019',
-    desc: """Created a website for non-professional machine learning users to create a multi-label model, test its performance, and get new data labels.""",
+    desc:
+        """Created a website for non-professional machine learning users to create a multi-label model, test its performance, and get new data labels.""",
     technologies: [
       angular,
       python,
@@ -34,7 +60,7 @@ Covered all edge cases to ensure optimal performance.""",
 class Experiences extends StatelessWidget {
   const Experiences({Key key}) : super(key: key);
 
-  Widget _getItemWidget(final int index){
+  Widget _getItemWidget(final int index) {
     final experience = experiences[index];
 
     return Padding(
@@ -43,28 +69,22 @@ class Experiences extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(20),
           child: Column(
-						crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                experience.title + " | " + experience.entreprise,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                experience.title + " @ " + experience.entreprise,
+                style: TextStyle(fontSize: 20),
               ),
               Text(
                 experience.period,
-                style: TextStyle(
-                  fontSize: 15,
-                ),
+                style: TextStyle(fontSize: 15),
               ),
               Text(
                 experience.desc,
-                style: TextStyle(
-                  fontSize: 17,
-                ),
+                style: TextStyle(fontSize: 17),
               ),
-              if(experience.technologies != null && experience.technologies.length > 0)
+              if (experience.technologies != null &&
+                  experience.technologies.length > 0)
                 Container(
                   height: 45,
                   child: ListView.builder(
@@ -88,17 +108,22 @@ class Experiences extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text("Experience"),
+        title: Text("Experience"),
         actions: <Widget>[DarkThemeSwitcherContainer()],
       ),
       body: Padding(
         padding: EdgeInsets.all(8),
-        child:Container(
-          child: ListView.builder(
-            itemCount: experiences.length,
-            itemBuilder: (BuildContext context, int index) {
-              return _getItemWidget(index);
-            },
+        child: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 720,
+            ),
+            child: ListView.builder(
+              itemCount: experiences.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _getItemWidget(index);
+              },
+            ),
           ),
         ),
       ),

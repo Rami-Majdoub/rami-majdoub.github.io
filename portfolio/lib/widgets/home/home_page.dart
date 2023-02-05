@@ -47,9 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
 									const Links(),
 								],
 							),
-              Row(
-								mainAxisAlignment: MainAxisAlignment.center, // vertically
-								crossAxisAlignment: CrossAxisAlignment.center, // horizontally
+              Wrap(
+
                 children: [
                   ActionButton(
                     title: "Projects",

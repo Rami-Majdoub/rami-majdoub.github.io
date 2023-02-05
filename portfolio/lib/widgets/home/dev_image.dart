@@ -10,7 +10,7 @@ class DevImage extends StatelessWidget {
      	height: 150,
      	decoration: new BoxDecoration(
   			shape: BoxShape.rectangle,
-				borderRadius: BorderRadius.all(Radius.circular(40)),
+				borderRadius: BorderRadius.all(Radius.circular(1000)),
   			image: DecorationImage(
   				image: AssetImage('assets/images/rami-majdoub.jpg'),
   				fit: BoxFit.fill,

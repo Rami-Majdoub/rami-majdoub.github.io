@@ -25,6 +25,8 @@ class Technologie{
 final java = Technologie(name: 'Java', color: const Color(0xffb07219));
 
 final javaScript = Technologie(name: 'JavaScript', color: const Color(0xfff1e05a), fontColor: Colors.black);
+final typeScript = Technologie(name: 'TypeScript', color: const Color(0xff2b7489));
+final csharp = Technologie(name: 'C#', color: const Color(0xff8d3aa3));
 final angular = Technologie(name: 'Angular', color: const Color(0xffdc2b3a)); // ts: 2b7489
 final mongo = Technologie(name: 'MongoDB', color: const Color(0xff27aa43));
 final express = Technologie(name: 'Express', color: const Color(0xff31312f));
@@ -32,6 +34,7 @@ final express = Technologie(name: 'Express', color: const Color(0xff31312f));
 final php = Technologie(name: 'PHP', color: const Color(0xff4F5D95));//4F5D95
 final laravel = Technologie(name: 'Laravel', color: const Color(0xfff72c1f));
 final symfony = Technologie(name: 'Symfony', color: Colors.black);
+final xamarin = Technologie(name: 'Xamarin', color: const Color(0xff3190d0));
 
 final python = Technologie(name: 'Python', color: const Color(0xff3572A5));
 final flask = Technologie(name: 'Flask', color: Colors.black);
@@ -42,3 +45,5 @@ final visualBasic = Technologie(name: 'Visual Basic', color: const Color(0xff945
 final batchfile = Technologie(name: 'Batchfile', color: const Color(0xffC1F12E), fontColor: Colors.black);
 
 final git = Technologie(name: 'Git', color: const Color(0xffe94e31));
+final solidity = Technologie(name: 'Solidity', color: const Color(0xff31312f));
+final hardhat = Technologie(name: 'Hardhat', color: const Color(0xfffff002), fontColor: Colors.black);

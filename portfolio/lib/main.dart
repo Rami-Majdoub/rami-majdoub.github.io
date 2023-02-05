@@ -44,9 +44,6 @@ class _MyAppState extends State<MyApp> {
               themeMode: themeChangeProvider.darkTheme? ThemeMode.dark: ThemeMode.light,
               theme: ThemeData(
                 primarySwatch: Colors.blue,
-                cardTheme: CardTheme(
-                  color: Colors.grey[300],
-                ),
               ),
               darkTheme: ThemeData.dark(),
               home: MyHomePage(),
